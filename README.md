@@ -1,7 +1,5 @@
-# UITextView+PlaceHolderExt
+# UIWebView+HeaderFooter
 ===========================
-
-[![CocoaPods](http://img.shields.io/cocoapods/v/UITextView+PlaceholderExt.svg?style=flat)](http://cocoapods.org/?q=name%3AUITextView%2BPlaceholder)
 
 This is as category of UITextView, in order to add a placeHolder.
 
@@ -10,18 +8,18 @@ Installation
 Use [CocoaPods](http://cocoapods.org).
 
 ```ruby
-pod 'UITextView+PlaceholderExt'
+pod 'UIWebView+HeaderFooter'
 ```
 
 Usage
 -----
 
-Create `UITextView` by code/xib/storyboard, then set `placeholder`.
+Create `UIWebView` by code/xib/storyboard, then set `headerView` or `footerView`.
 
 ```objc
-textView.placeHolder = @"place holder string";
+webView.headerView = headerView;
 ```
 
 License
 -------
-UITextView+PlaceholderExt is under MIT license. See LICENSE for more information.
+UIWebView+HeaderFooter is under MIT license. See LICENSE for more information.
