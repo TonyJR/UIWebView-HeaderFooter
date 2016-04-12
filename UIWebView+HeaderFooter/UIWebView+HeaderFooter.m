@@ -33,6 +33,12 @@
     [headerView setFrame:CGRectMake(0, 0, self.frame.size.width, headerView.frame.size.height)];
     headerView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
     [self.scrollView addSubview:headerView];
+    
+    
+    UIView * webBrowser = [self webBrowser];
+    if (webBrowser) {
+        [webBrowser setFrame:(CGRect){0, headerView.frame.size.height,webBrowser.frame.size}];
+    }
 }
 
 -(UIView *)headerView{

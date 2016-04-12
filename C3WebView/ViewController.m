@@ -25,9 +25,7 @@
     [web loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://github.com/TonyJR/UIWebView-HeaderFooter"]]];
     [self.view addSubview:web];
     
-    UIButton * button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
-    button.backgroundColor = [UIColor yellowColor];
-    web.headerView = button;
+    
     
     
     UIButton * button2 = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
@@ -40,6 +38,12 @@
     [web setFrame:CGRectMake(100, 100, 250, 350)];
 }
 
+
+-(IBAction)addHeader:(id)sender{
+    UIButton * button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    button.backgroundColor = [UIColor yellowColor];
+    web.headerView = button;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
