@@ -1,5 +1,6 @@
 # UIWebView+HeaderFooter
 ===========================
+[![CocoaPods](http://img.shields.io/cocoapods/v/UIWebView+HeaderFooter.svg?style=flat)](http://cocoapods.org/?q=name%3AUIWebView%2BHeaderFooter)
 
 This is as category of UIWebView, in order to add a placeHolder.
 
