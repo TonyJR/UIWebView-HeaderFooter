@@ -1,7 +1,7 @@
 # UIWebView+HeaderFooter
 ===========================
 
-This is as category of UITextView, in order to add a placeHolder.
+This is as category of UIWebView, in order to add a placeHolder.
 
 Installation
 ------------
