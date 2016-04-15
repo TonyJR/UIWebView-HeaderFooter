@@ -21,24 +21,6 @@
 #define kHeaderViewTag 2200
 #define kFooterViewTag 2201
 
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        self.webBrowser.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    }
-    return self;
-}
-
-- (instancetype)initWithCoder:(NSCoder *)coder
-{
-    self = [super initWithCoder:coder];
-    if (self) {
-        self.webBrowser.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-
-    }
-    return self;
-}
 
 -(void)setHeaderView:(UIView *)headerView{
     UIView * _headerView = [self headerView];
