@@ -32,7 +32,7 @@
     headerView.tag = kHeaderViewTag;
     [headerView setFrame:CGRectMake(0, 0, self.frame.size.width, headerView.frame.size.height)];
     headerView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
-    [self.scrollView addSubview:headerView];
+    [self.scrollView insertSubview:headerView atIndex:0];
     
     
     UIView * webBrowser = [self webBrowser];
@@ -55,7 +55,7 @@
     footerView.tag = kFooterViewTag;
     [footerView setFrame:CGRectMake(0, self.frame.size.height - footerView.frame.size.height, self.frame.size.width, footerView.frame.size.height)];
     footerView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
-    [self.scrollView addSubview:footerView];
+    [self.scrollView insertSubview:footerView atIndex:0];
     
     
     UIEdgeInsets edgeInsets = self.scrollView.contentInset;
