@@ -21,6 +21,24 @@
 #define kHeaderViewTag 2200
 #define kFooterViewTag 2201
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.webBrowser.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    }
+    return self;
+}
+
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.webBrowser.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+
+    }
+    return self;
+}
 
 -(void)setHeaderView:(UIView *)headerView{
     UIView * _headerView = [self headerView];
@@ -33,6 +51,7 @@
     [headerView setFrame:CGRectMake(0, 0, self.frame.size.width, headerView.frame.size.height)];
     headerView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
     [self.scrollView insertSubview:headerView atIndex:0];
+    
     
     
     UIView * webBrowser = [self webBrowser];
@@ -53,7 +72,9 @@
 
     
     footerView.tag = kFooterViewTag;
-    [footerView setFrame:CGRectMake(0, self.frame.size.height - footerView.frame.size.height, self.frame.size.width, footerView.frame.size.height)];
+
+    
+    [footerView setFrame:CGRectMake(0, self.scrollView.contentSize.height, self.frame.size.width, footerView.frame.size.height)];
     footerView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
     [self.scrollView insertSubview:footerView atIndex:0];
     

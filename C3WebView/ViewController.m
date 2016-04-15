@@ -11,6 +11,7 @@
 
 @interface ViewController (){
     UIWebView * web;
+    BOOL didResized;
 }
 
 @end
@@ -20,29 +21,46 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    web =[[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 100, 400)];
-    web.backgroundColor = [UIColor blackColor];
+    web =[[UIWebView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 50)];
+    web.backgroundColor = [UIColor lightGrayColor];
     [web loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://github.com/TonyJR/UIWebView-HeaderFooter"]]];
     [self.view addSubview:web];
     
     
     
     
-    UIButton * button2 = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
-    button2.backgroundColor = [UIColor grayColor];
-    web.footerView = button2;
+    
     
 }
 
 -(IBAction)changeSize:(id)sender{
-    [web setFrame:CGRectMake(100, 100, 250, 350)];
+    
+    [UIView beginAnimations:@"resizing" context:nil];
+    [UIView setAnimationDuration:0.3];
+    if (didResized) {
+        [web setFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 50)];
+    }else{
+        [web setFrame:CGRectMake(100, 100, 250, 350)];
+
+    }
+    [UIView commitAnimations];
+    
+    didResized = !didResized;
 }
 
 
 -(IBAction)addHeader:(id)sender{
-    UIButton * button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
-    button.backgroundColor = [UIColor yellowColor];
-    web.headerView = button;
+    UIButton * headerView = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 50)];
+    [headerView setTitle:@"This is a HeaderView" forState:UIControlStateNormal];
+
+    web.headerView = headerView;
+}
+
+
+-(IBAction)addBottom:(id)sender{
+    UIButton * bottomView = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 50)];
+    [bottomView setTitle:@"This is a BottomView" forState:UIControlStateNormal];
+    web.footerView = bottomView;
 }
 
 - (void)didReceiveMemoryWarning {
