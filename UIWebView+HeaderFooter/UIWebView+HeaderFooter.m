@@ -102,8 +102,6 @@
     }
 }
 
--(void)dealloc{
-//    [self.scrollView removeObserver:self forKeyPath:@"contentSize"];
-}
+
 
 @end
