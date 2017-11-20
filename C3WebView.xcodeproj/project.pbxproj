@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C25877F31FC2E360006C294D /* WebViewHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = C25877F11FC2E360006C294D /* WebViewHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C25877F71FC2E367006C294D /* UIWebView+HeaderFooter.h in Headers */ = {isa = PBXBuildFile; fileRef = EA0547931CBB9B07003457FC /* UIWebView+HeaderFooter.h */; };
+		C25877F71FC2E367006C294D /* UIWebView+HeaderFooter.h in Headers */ = {isa = PBXBuildFile; fileRef = EA0547931CBB9B07003457FC /* UIWebView+HeaderFooter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C25877F81FC2E367006C294D /* UIWebView+HeaderFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0547941CBB9B07003457FC /* UIWebView+HeaderFooter.m */; };
 		EA05476C1CBB839D003457FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA05476B1CBB839D003457FC /* main.m */; };
 		EA05476F1CBB839D003457FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA05476E1CBB839D003457FC /* AppDelegate.m */; };
