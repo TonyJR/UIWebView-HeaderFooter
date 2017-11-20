@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C25877F31FC2E360006C294D /* WebViewHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = C25877F11FC2E360006C294D /* WebViewHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C25877F71FC2E367006C294D /* UIWebView+HeaderFooter.h in Headers */ = {isa = PBXBuildFile; fileRef = EA0547931CBB9B07003457FC /* UIWebView+HeaderFooter.h */; };
+		C25877F81FC2E367006C294D /* UIWebView+HeaderFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0547941CBB9B07003457FC /* UIWebView+HeaderFooter.m */; };
 		EA05476C1CBB839D003457FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA05476B1CBB839D003457FC /* main.m */; };
 		EA05476F1CBB839D003457FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA05476E1CBB839D003457FC /* AppDelegate.m */; };
 		EA0547721CBB839D003457FC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0547711CBB839D003457FC /* ViewController.m */; };
@@ -28,6 +31,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C25877EF1FC2E360006C294D /* WebViewHeader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WebViewHeader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C25877F11FC2E360006C294D /* WebViewHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewHeader.h; sourceTree = "<group>"; };
+		C25877F21FC2E360006C294D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA0547671CBB839D003457FC /* C3WebView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = C3WebView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA05476B1CBB839D003457FC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EA05476D1CBB839D003457FC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -46,6 +52,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C25877EB1FC2E360006C294D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA0547641CBB839D003457FC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -63,12 +76,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C25877F01FC2E360006C294D /* WebViewHeader */ = {
+			isa = PBXGroup;
+			children = (
+				C25877F11FC2E360006C294D /* WebViewHeader.h */,
+				C25877F21FC2E360006C294D /* Info.plist */,
+			);
+			path = WebViewHeader;
+			sourceTree = "<group>";
+		};
 		EA05475E1CBB839D003457FC = {
 			isa = PBXGroup;
 			children = (
 				EA05478F1CBB83C6003457FC /* UIWebView+HeaderFooter */,
 				EA0547691CBB839D003457FC /* C3WebView */,
 				EA0547831CBB839D003457FC /* C3WebViewTests */,
+				C25877F01FC2E360006C294D /* WebViewHeader */,
 				EA0547681CBB839D003457FC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -78,6 +101,7 @@
 			children = (
 				EA0547671CBB839D003457FC /* C3WebView.app */,
 				EA0547801CBB839D003457FC /* C3WebViewTests.xctest */,
+				C25877EF1FC2E360006C294D /* WebViewHeader.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -126,7 +150,37 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		C25877EC1FC2E360006C294D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C25877F71FC2E367006C294D /* UIWebView+HeaderFooter.h in Headers */,
+				C25877F31FC2E360006C294D /* WebViewHeader.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		C25877EE1FC2E360006C294D /* WebViewHeader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C25877F61FC2E360006C294D /* Build configuration list for PBXNativeTarget "WebViewHeader" */;
+			buildPhases = (
+				C25877EA1FC2E360006C294D /* Sources */,
+				C25877EB1FC2E360006C294D /* Frameworks */,
+				C25877EC1FC2E360006C294D /* Headers */,
+				C25877ED1FC2E360006C294D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WebViewHeader;
+			productName = WebViewHeader;
+			productReference = C25877EF1FC2E360006C294D /* WebViewHeader.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		EA0547661CBB839D003457FC /* C3WebView */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA0547891CBB839D003457FC /* Build configuration list for PBXNativeTarget "C3WebView" */;
@@ -171,6 +225,10 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = Tony;
 				TargetAttributes = {
+					C25877EE1FC2E360006C294D = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
 					EA0547661CBB839D003457FC = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
@@ -195,11 +253,19 @@
 			targets = (
 				EA0547661CBB839D003457FC /* C3WebView */,
 				EA05477F1CBB839D003457FC /* C3WebViewTests */,
+				C25877EE1FC2E360006C294D /* WebViewHeader */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C25877ED1FC2E360006C294D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA0547651CBB839D003457FC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -220,6 +286,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C25877EA1FC2E360006C294D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C25877F81FC2E367006C294D /* UIWebView+HeaderFooter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA0547631CBB839D003457FC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -269,6 +343,80 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C25877F41FC2E360006C294D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = WebViewHeader/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.haithngn.WebViewHeader;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C25877F51FC2E360006C294D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = WebViewHeader/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.haithngn.WebViewHeader;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		EA0547871CBB839D003457FC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -398,6 +546,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C25877F61FC2E360006C294D /* Build configuration list for PBXNativeTarget "WebViewHeader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C25877F41FC2E360006C294D /* Debug */,
+				C25877F51FC2E360006C294D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EA0547621CBB839D003457FC /* Build configuration list for PBXProject "C3WebView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
