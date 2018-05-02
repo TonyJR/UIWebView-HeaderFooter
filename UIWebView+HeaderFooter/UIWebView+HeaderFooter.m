@@ -28,7 +28,8 @@
 }
 
 - (BOOL)needsUpdateBrowser{
-    return objc_getAssociatedObject(self, "needsUpdateBrowser");
+    NSNumber *result = objc_getAssociatedObject(self, "needsUpdateBrowser");
+    return [result boolValue];
 }
 
 - (void)layoutSubviews{

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "UIWebView+HeaderFooter"
-  s.version          = "1.0.0"             
+  s.version          = "1.0.1"             
   s.summary          = "A category of UIWebView with headerView and footerView"    
   s.description      = <<-DESC
                        A category of UIWebView with headerView and footerView
