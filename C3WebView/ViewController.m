@@ -26,7 +26,7 @@
     web.backgroundColor = [UIColor lightGrayColor];
     [web loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://github.com/TonyJR/UIWebView-HeaderFooter"]]];
     [self.view addSubview:web];
-    
+    [self addHeader:nil];
 }
 
 -(IBAction)changeSize:(id)sender{
@@ -67,7 +67,9 @@
     [tableView addObserver:self forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:NULL];
 }
 
-
+-(IBAction)reload:(id)sender{
+    [web reload];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -77,15 +79,15 @@
 #pragma mark - KVO
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-    NSValue * value = change[@"new"];
+
+    NSValue *newValue = change[@"new"];
     CGSize size;
-    [value getValue:&size];
+    [newValue getValue:&size];
     size.height += 5;
     if (!CGSizeEqualToSize(size, tableView.frame.size)) {
         tableView.frame = (CGRect){0,0,size};
         web.footerView = tableView;
     }
-    
 }
 
 
